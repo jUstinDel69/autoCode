@@ -29,7 +29,7 @@ let levels = {
 
     addEtapeDiscussion: function () {
     
-        if (levels.levelsData['level_1'].etapes[levels.idEtape][0] == 'Justin') {
+        if (levels.levelsData['level_1'].etapes[levels.idEtape][0] == 'José') {
             classParoles = 'playerNameCaracter';
         } else {
             classParoles = 'caracterNameCaracter';
@@ -53,15 +53,13 @@ let levels = {
         
         this.responseIdEtape = setIdEtape;
 
-        console.log(setIdEtape);
-        console.log(levels.levelsData['level_1'].etapes[setIdEtape][0] );
         
         //Si le joueur doit répondre
-        if(levels.levelsData['level_1'].etapes[setIdEtape][0] != 'Justin') {
-            console.log('Player doit répondre');
+        if(levels.levelsData['level_1'].etapes[setIdEtape][0] != 'José') {
             
             for (let i = 0; i < levels.levelsData['level_1'].etapes[this.responseIdEtape][2].length; i++) {
                 responseIdEtape = this.responseIdEtape + 1;
+
                 html += '<li id="" onclick="levels.response(' + levels.levelsData['level_1'].etapes[this.responseIdEtape][2][0] + ')">' + levels.levelsData['level_1'].etapes[levels.levelsData['level_1'].etapes[this.responseIdEtape][2][0]][1] + '</li>';
             }
             document.querySelector('#levelOptions').innerHTML = html;

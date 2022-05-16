@@ -2,10 +2,11 @@
     "level_1" : {
         "title" : "Plus de bus",
         "etapes" : [
-            ["Jasmine", "Salut ça va ?", [1]],
-            ["Justin", "Oui ça va et toi ?", [2]],
-            ["Jasmine", "Non", [3]],
-            ["Justin", "Pourquoi ?", [4]]
+            ["Claudia", "Salut ça va ?", [1]],
+            ["José", "Oui ça va et toi ?", [2]],
+            ["Claudia", "Non", [3]],
+            ["José", "Pourquoi ?", [4]],
+            ["Claudia", "Parce que j'ai faim !", [0]]
         ]
     }
 }

@@ -18,17 +18,31 @@ body {
     background-color: $mainColor;
 
     font-family: 'Roboto', sans-serif;
+    background-image: url('https://cdn.pixabay.com/photo/2022/04/25/06/22/feather-7155181_1280.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 header {
     font-size: 1.4em;
     position: fixed;
     display: flex;
+    z-index: 999;
+    width: 90%;
+    margin: 0.4em;
+    padding: 0.4em;
 
     .tab {
         cursor: pointer;
         padding: 1em;
     }
+
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 16.5px );
+    -webkit-backdrop-filter: blur( 16.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 canvas {
@@ -115,7 +129,7 @@ h2 {
     list-style: none;
     position: relative;
     padding: 0;
-    max-height: 45vh;
+    max-height: 75vh;
     overflow: scroll;
     cursor: pointer;
 
@@ -146,12 +160,14 @@ h2 {
         .time {
             float: right;
             width: 20%;
+            color: silver;
         }
     }
 
     .nameCaracter {
         margin-right: 0.7em;
         font-weight: bold;
+        color: silver;
     }
 
     .caracterNameCaracter {
@@ -168,6 +184,7 @@ h2 {
         .time {
             float: left;
             width: 20%;
+            color: silver;
         }
     }
 }
