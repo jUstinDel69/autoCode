@@ -60,7 +60,7 @@ let levels = {
             for (let i = 0; i < levels.levelsData['level_1'].etapes[this.responseIdEtape][2].length; i++) {
                 responseIdEtape = this.responseIdEtape + 1;
 
-                html += '<li id="" onclick="levels.response(' + levels.levelsData['level_1'].etapes[this.responseIdEtape][2][0] + ')">' + levels.levelsData['level_1'].etapes[levels.levelsData['level_1'].etapes[this.responseIdEtape][2][0]][1] + '</li>';
+                html += '<li id="" onclick="levels.response(' + levels.levelsData['level_1'].etapes[this.responseIdEtape][2][i] + ')">' + levels.levelsData['level_1'].etapes[levels.levelsData['level_1'].etapes[this.responseIdEtape][2][i]][1] + '</li>';
             }
             document.querySelector('#levelOptions').innerHTML = html;
 
