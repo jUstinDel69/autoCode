@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+@import 'functions';
+@import 'variables';
+
+#root {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+
+    background-color: $mainColor;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    font-size: 1.4em;
+    position: fixed;
+    display: flex;
+
+    .tab {
+        cursor: pointer;
+        padding: 1em;
+    }
+}
+
+canvas {
+    border: 2px solid red;
+    // width: 1920px;
+    // height: 800px;
+}
+
+main {
+    display: flex;
+    text-align: center;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 25%;
+    max-height: 80vh;
+}
+
+textarea {
+    width: 100%;
+    height: 30em;
+}
+
+p {
+    line-height: 1.5em;
+    font-size: 1.2em;
+}
+
+h2 {
+    position: relative;
+    top: 2em;
+}
+
+//Flex basis
+@for $i from 1 through 20 {
+    $flexbasis: 5% * $i;
+
+    .fb-#{$i * 5} {
+        flex-basis: $flexbasis;
+    }
+}
+
+.display-none {
+    display: none;
+}
+
+#ContainertabCaracters {
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 70vh;
+    width: 70%;
+    padding: 2em;
+}
+
+#levelOptions {
+    // display: flex;
+    list-style: none;
+    // justify-content: space-around;
+    padding: 0;
+
+    li {
+        // flex-basis: 33%;
+        padding: 2em;
+        margin: 0.8em;
+        background-color: rgba(255, 255, 255, 0.59);
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        transition: all 0.1s;
+        cursor: pointer;
+        
+        &:active {
+            box-shadow: none !important;
+            transform: scale(0.98) translateY(-0.1em);
+        }
+    }
+}
+
+#levelText {
+    list-style: none;
+    position: relative;
+    padding: 0;
+    max-height: 45vh;
+    overflow: scroll;
+    cursor: pointer;
+
+    li {
+        margin: 7em auto;
+    }
+
+    .paroles {
+        width: 70%;
+        margin: 0.3em;
+        padding: 1em;
+        border-radius: 7px;
+    }
+
+    .playerNameCaracter {
+        .paroles {
+            background-color: aquamarine;
+        }
+        
+        .nameCaracter {
+            color: rgb(208, 204, 204);
+            font-weight: bold;
+            text-align: right;
+        }
+        .paroles {
+            float: right;
+        }
+        .time {
+            float: right;
+            width: 20%;
+        }
+    }
+
+    .nameCaracter {
+        margin-right: 0.7em;
+        font-weight: bold;
+    }
+
+    .caracterNameCaracter {
+        .paroles {
+            background-color: rgb(183, 88, 53);
+        }
+
+        text-align: left;
+
+        .paroles {
+            float: left;
+        }
+
+        .time {
+            float: left;
+            width: 20%;
+        }
+    }
+}

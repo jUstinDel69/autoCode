@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
-    <div id="root"></div>
-    <button id="start">Lancer</button>
+    <header>
+        <div class="tab" id="tabCaracters">👥 Personnages</div>
+        <div class="tab">👜 Inventaires</div>
+    </header>
+    <main>
+        <!-- <canvas id="root" class="fb-80"></canvas> -->
+        <div id="ContainertabCaracters" class="display-none">
+        </div>
+        <div id="root">
+            <div>
+                <!-- <h2 id="levelTitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quam?</h2> -->
+                <ul id="levelText">
+                    
+                </ul>
+            </div>
+            <ul id="levelOptions"></ul>
+        </div>
+        <!-- <aside>
+            <textarea id="ac_commandes"></textarea>
+
+            <button id="start">Lancer</button>
+        </aside> -->
+    </main>
+    <script src="/js/caracters.js"></script>
+    <script src="/js/levels.js"></script>
+    <script src="/js/root.js"></script>
     <script src="/js/script.js"></script>
 </body>
+
 </html>
