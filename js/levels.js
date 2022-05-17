@@ -93,7 +93,7 @@ let levels = {
 
                 setTimeout(() => {
                     this.response(levels.levelsData['level_1'].etapes[this.idEtape][2][0])
-                }, Math.floor(Math.random() * (5000 - 3000 + 1) + 3000));
+                }, Math.floor(Math.random() * (1000 - 0 + 1) + 0));
             
         }
         // } else {

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCode - Générate level</title>
+    <link rel="stylesheet" href="styles/style-admin.css">
+</head>
+
+<body>
+    <div>
+        Sauvegarde automatique
+    </div>
+    <form action="#">
+        <fieldset>
+            <legend>Paramètre du niveaux</legend>
+            <div>
+                <div>
+                    <label for="nameLevel">Nom du niveau</label>
+                </div>
+                <div>
+                    <input type="text" name="nameLevel" id="nameLevel" placeholder="Le nom du niveau..." class="save">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label for="descriptionLevel">Description du niveau</label>
+                </div>
+                <div>
+                    <textarea name="descriptionLevel" id="descriptionLevel" placeholder="La description du niveau..."
+                        class="save"></textarea>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Personnages</legend>
+        </fieldset>
+        <fieldset>
+            <legend>Histoire</legend>
+        </fieldset>
+        <input type="button" value="Créer">
+    </form>
+    <script src="/js/generateLevel.js"></script>
+</body>
+
+</html>
