@@ -39,8 +39,44 @@
         </fieldset>
         <fieldset>
             <legend>Histoire</legend>
+            <fieldset>
+                <legend>Etape 1</legend>
+                <div>
+                    Qui parle ?
+                    <select name="" id="etape_0_caracter" class="saveEtape">
+                        <option value="José">José</option>
+                        <option value="Claudia">Claudia</option>
+                    </select>
+                </div>
+                <div>
+                    <div>
+                        Parole
+                    </div>
+                    <div>
+                        <textarea id="etape_0_parole"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Etape 2</legend>
+                <div>
+                    Qui parle ?
+                    <select name="" id="etape_1_caracter" class="saveEtape">
+                        <option value="José">José</option>
+                        <option value="Claudia">Claudia</option>
+                    </select>
+                </div>
+                <div>
+                    <div>
+                        Parole
+                    </div>
+                    <div>
+                        <textarea id="etape_1_parole"></textarea>
+                    </div>
+                </div>
+            </fieldset>
         </fieldset>
-        <input type="button" value="Créer">
+        <input type="button" value="Créer" id="buttonCreate">
     </form>
     <script src="/js/generateLevel.js"></script>
 </body>
