@@ -5,7 +5,7 @@ let levels = {
 
     idEtape: 0,
 
-    responseIdEtape : 0,
+    responseIdEtape: 0,
 
     getLevels: function () {
         fetch('js/levels.json')
@@ -21,42 +21,55 @@ let levels = {
 
     thisLevel: function (newId) {
         levels.idEtape = newId;
-        
+
         // document.querySelector('#levelTitle').innerHTML = levels.levelsData['level_1'].title;
 
-        
+
     },
 
     addEtapeDiscussion: function () {
-    
+
         if (levels.levelsData['level_1'].etapes[levels.idEtape][0] == 'José') {
             classParoles = 'playerNameCaracter';
         } else {
             classParoles = 'caracterNameCaracter';
         }
 
-        
+
         date = new Date(this.now);
 
-        document.querySelector('#levelText').innerHTML += '<li class="' + classParoles + '"><div class="nameCaracter">' + levels.levelsData['level_1'].etapes[levels.idEtape][0] + '</div><div class="paroles">' + levels.levelsData['level_1'].etapes[levels.idEtape][1] + '</div><div class="time">' + date.getHours() + 'h ' + date.getMinutes() + 'min</div></li>';
+        testDiv = document.createElement("li");
+        testDiv.classList.add(classParoles);
+
+        testDiv.innerHTML = '<div class="nameCaracter">' + levels.levelsData['level_1'].etapes[levels.idEtape][0] + '</div><div class="paroles">' + levels.levelsData['level_1'].etapes[levels.idEtape][1] + '</div><div class="time">' + date.getHours() + 'h ' + date.getMinutes() + 'min</div>';
+
+        document.querySelector('#levelText').appendChild(testDiv);
+
+        // document.querySelector('#levelText').innerHTML += '<li class="' + classParoles + '"><div class="nameCaracter">' + levels.levelsData['level_1'].etapes[levels.idEtape][0] + '</div><div class="paroles">' + levels.levelsData['level_1'].etapes[levels.idEtape][1] + '</div><div class="time">' + date.getHours() + 'h ' + date.getMinutes() + 'min</div></li>';
 
         //Scrool tout en bas
         element = document.querySelector('#levelText');
-		element.scrollTop = element.scrollHeight;
+        element.scrollTop = element.scrollHeight;
     },
 
 
 
-    response : function(setIdEtape) {
+    response: function (setIdEtape) {
         html = '';
         this.idEtape = setIdEtape;
-        
+
         this.responseIdEtape = setIdEtape;
 
-        
+
         //Si le joueur doit répondre
-        if(levels.levelsData['level_1'].etapes[setIdEtape][0] != 'José') {
-            
+
+        if (levels.levelsData['level_1'].etapes[setIdEtape][0] != 'José') {
+            //Vibrate
+            window.navigator.vibrate(200);
+            //Ding
+            var audioNotif = new Audio('/medias/sound/notif.wav');
+            audioNotif.play();
+
             for (let i = 0; i < levels.levelsData['level_1'].etapes[this.responseIdEtape][2].length; i++) {
                 responseIdEtape = this.responseIdEtape + 1;
 
@@ -69,19 +82,26 @@ let levels = {
         } else {
             //Sinon reponse de l'ordinateur
 
-            document.querySelector('#levelOptions').innerHTML = "Entrain de répondre";
-            this.addEtapeDiscussion();
+
+            // document.querySelector('#fakeInput').innerHTML = 'test';
+
+
+
+                document.querySelector('#levelOptions').innerHTML = "Entrain de répondre";
+
+                this.addEtapeDiscussion();
+
+                setTimeout(() => {
+                    this.response(levels.levelsData['level_1'].etapes[this.idEtape][2][0])
+                }, Math.floor(Math.random() * (5000 - 3000 + 1) + 3000));
             
-            setTimeout(() => {
-                this.response(levels.levelsData['level_1'].etapes[this.idEtape][2][0])
-            }, Math.floor(Math.random() * 3000));
         }
         // } else {
         //     console.log('Player attend réponse')
-        
+
 
         // }
-    
+
     }
 }
 
