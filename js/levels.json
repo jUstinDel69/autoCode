@@ -2,14 +2,25 @@
     "level_1" : {
         "title" : "Plus de bus",
         "etapes" : [
-            ["Claudia", "Salut ça va ?", [1, 5]],
-            ["José", "Oui ça va et toi ?", [2]],
-            ["Claudia", "Non", [3]],
-            ["José", "Pourquoi ?", [4]],
-            ["Claudia", "Parce que j'ai faim !", [0]],
-            ["José", "Ca va.", [6]],
-            ["Claudia", "Tu ne me demandes pas comment je vais ?", [7]],
-            ["José", "Si bien sûr, ça va ?", [2]]
+            ["Claudia", "Salut José je dérange pas j'espere", [1, 2]],
+            ["José", "Non pas du tout y a un problème ?", [3]],
+            ["José", "Un peu en faites ouais", [9]],
+
+            ["Claudia", "Y a pas de 52 pour rentrer je sais pas comment faire 😥😥", [4, 5]],
+            ["José", "Ha merde tu vas faire comment ?", [6]],
+            ["José", "Sérieusement tu me dérange pour sa !?", [7]],
+
+            ["Claudia", "je sais vraiment pas, tu peux me commander un Uber stp 🤗😬", [7]],
+            ["José", "t sérieuse je vais pas te payer le uber fallais faire attention ma vielle", [8]], 
+
+            ["Claudia", "calme toi je te force a rien", [10]],
+
+            ["Claudia", "Je suis désolé c'st assez important 🥺", [11, 12]],
+
+            ["", "", []],
+
+            ["José", "Plus important que ce que je suis entrain de faire ? Chui pas sur.", [10]],
+            ["José", "Y a un soucis ?", [3]]
         ]
     }
 }
