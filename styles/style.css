@@ -2,25 +2,20 @@
 #root {
   width: 100%;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 body {
   margin: 0;
   overflow: hidden;
-  background-color: #6a8ac1;
+  background-color: #6fd480;
   font-family: 'Roboto', sans-serif;
-  background-image: url("https://cdn.pixabay.com/photo/2022/04/25/06/22/feather-7155181_1280.jpg");
+  background-image: url("/medias/images/femme.jpg");
   background-size: cover;
   background-position: center;
+}
+
+h3 {
+  margin: 0.3em;
 }
 
 header {
@@ -30,16 +25,12 @@ header {
   display: -ms-flexbox;
   display: flex;
   z-index: 999;
-  width: 90%;
-  margin: 0.4em;
+  width: 100%;
   padding: 0.4em;
-  background: rgba(255, 255, 255, 0.25);
-  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(16.5px);
-  -webkit-backdrop-filter: blur(16.5px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: #6fd480;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  color: #e2e2e2;
 }
 
 header .tab {
@@ -49,6 +40,19 @@ header .tab {
 
 canvas {
   border: 2px solid red;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main {
@@ -204,6 +208,11 @@ h2 {
 }
 
 #levelOptions {
+  overflow: scroll;
+  max-height: 35vh;
+  position: absolute;
+  bottom: 1em;
+  width: 100%;
   list-style: none;
   padding: 0;
 }
@@ -231,7 +240,7 @@ h2 {
   list-style: none;
   position: relative;
   padding: 0;
-  max-height: 75vh;
+  max-height: 70vh;
   overflow: scroll;
   cursor: pointer;
 }
@@ -245,6 +254,8 @@ h2 {
   margin: 0.3em;
   padding: 1em;
   border-radius: 7px;
+  font-size: 1.1em;
+  letter-spacing: 0.01em;
 }
 
 #levelText .playerNameCaracter .paroles {
@@ -264,21 +275,47 @@ h2 {
 #levelText .playerNameCaracter .time {
   float: right;
   width: 20%;
-  color: silver;
+  color: #222327;
 }
 
 #levelText .nameCaracter {
   margin-right: 0.7em;
   font-weight: bold;
-  color: silver;
+  color: #222327;
 }
 
 #levelText .caracterNameCaracter {
+  position: relative;
+  left: -20em;
+  -webkit-animation-name: paroleAnim;
+          animation-name: paroleAnim;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   text-align: left;
 }
 
 #levelText .caracterNameCaracter .paroles {
-  background-color: #b75835;
+  background-color: #daa896;
+}
+
+@-webkit-keyframes paroleAnim {
+  from {
+    left: -20em;
+  }
+  to {
+    left: 0em;
+  }
+}
+
+@keyframes paroleAnim {
+  from {
+    left: -20em;
+  }
+  to {
+    left: 0em;
+  }
 }
 
 #levelText .caracterNameCaracter .paroles {
@@ -288,6 +325,6 @@ h2 {
 #levelText .caracterNameCaracter .time {
   float: left;
   width: 20%;
-  color: silver;
+  color: #222327;
 }
 /*# sourceMappingURL=style.css.map */
